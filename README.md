@@ -44,3 +44,11 @@ class CategoryCustomShape extends CustomClipper<Path> {
 
 6. Product card Images are wrapped with a Hero() widget with the tag property set to the product id. This allows the product images to slide when navigating to the product details screen.
 
+
+Screenshots
+
+![Simulator Screen Shot - iPhone 13 - 2022-11-18 at 22 33 40](https://user-images.githubusercontent.com/98651593/202780054-8a3906c4-11b8-4ed6-a960-1917362441cb.png)
+![Simulator Screen Shot - iPhone 13 - 2022-11-18 at 22 33 50](https://user-images.githubusercontent.com/98651593/202780060-834bc89a-f9c4-44bb-a234-a2e1d49a878e.png)
+
+
+
