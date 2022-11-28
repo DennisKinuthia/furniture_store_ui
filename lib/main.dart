@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:furniture_store/screens/home/home.dart';
+import 'package:furniture_store/routes/app_routes.dart';
 import 'package:furniture_store/utils/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: goRouter,
       debugShowCheckedModeBanner: false,
       title: 'Furniture Store',
       theme: ThemeData(
@@ -26,7 +27,6 @@ class MyApp extends StatelessWidget {
         ),
         textTheme: GoogleFonts.dmSansTextTheme().apply(displayColor: textColor),
       ),
-      home: const Home(),
     );
   }
 }

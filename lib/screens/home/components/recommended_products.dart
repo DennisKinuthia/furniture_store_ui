@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_store/models/product.dart';
-import 'package:furniture_store/screens/details/details_screen.dart';
+import 'package:furniture_store/routes/app_routes.dart';
 import 'package:furniture_store/screens/home/components/product_card.dart';
 import 'package:furniture_store/utils/size_config.dart';
+import 'package:go_router/go_router.dart';
 
 class RecommendedProducts extends StatelessWidget {
   const RecommendedProducts({
@@ -30,15 +31,17 @@ class RecommendedProducts extends StatelessWidget {
           ),
           itemBuilder: (context, index) => ProductCard(
                 product: products[index],
-                press: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>
-                          DetailsScreen(product: products[index]),
-                    ),
-                  );
-                },
+                press: () => context.pushNamed(AppRoutes.details.name,
+                    extra: products[index]),
+                // press: () {
+                //   Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //       builder: (context) =>
+                //           DetailsScreen(product: products[index]),
+                //     ),
+                //   );
+                // },
               )),
     );
   }
